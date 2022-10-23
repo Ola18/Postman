@@ -67,38 +67,6 @@
 			},
 			"response": [
 				{
-					"id": "428585c2-157a-4cad-b33b-7cfcd2a56a3a",
-					"name": "time male",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/songs?singer=Frank Sinatra&properties.year=1955",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"songs"
-							],
-							"query": [
-								{
-									"key": "singer",
-									"value": "Frank Sinatra"
-								},
-								{
-									"key": "properties.year",
-									"value": "1955"
-								}
-							]
-						}
-					},
-					"_postman_previewlanguage": "json",
-					"header": null,
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 1,\r\n            \"gender\":\"male\",\r\n            \"title\": \"My way\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"3:45\",\r\n                \"year\": \"1955\"\r\n            }\r\n        }\r\n    ]\r\n}"
-				},
-				{
 					"id": "40d3f236-c693-470d-b2c9-a8fd73607eab",
 					"name": "PositiveFilterResult",
 					"originalRequest": {
@@ -249,12 +217,12 @@
 	],
 	"variable": [
 		{
-			"id": "09c79e7f-b998-412c-a1e4-f6b23877f827",
+			"id": "70f93518-56c9-4786-a0ac-919039f1b651",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "8d025db5-b012-4e61-bfbf-20a55e1eeb00",
+			"id": "2df01dbd-e6a6-4d0f-a03e-c95f579a9f5a",
 			"key": "allFilters",
 			"value": ""
 		}
