@@ -16,7 +16,7 @@
 							"const songs = pm.response.json().songs;\r",
 							"const allFilters = pm.collectionVariables.get(\"allFilters\");\r",
 							"\r",
-							"let anyCharacterWordStart = \".*\\\\b\";\r",
+							"let anyCharacterWordStartBoundary = \".*\\\\b\";\r",
 							"\r",
 							"songs.forEach(song => {\r",
 							"    const songStr = JSON.stringify(song);\r",
@@ -214,12 +214,12 @@
 	],
 	"variable": [
 		{
-			"id": "5151776e-b583-42de-a7b7-42b6ed98a34f",
+			"id": "698a45bc-5f7b-49eb-8b59-9d2f2de8c4dc",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "a2b3e529-bd26-4dad-956c-227390b9d2c1",
+			"id": "c10091b3-2e56-4102-b516-cfe44134aa3d",
 			"key": "allFilters",
 			"value": ""
 		}
