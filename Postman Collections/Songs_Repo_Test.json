@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "894b3cb6-3f3c-4fc8-a81f-fa2f32f113fa",
+		"name": "MOCK Server Songs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TimeFilter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35d444cc-e9ef-45e3-868c-674c9af26533",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const songs = pm.response.json().songs;\r",
+							"const allFilters = JSON.parse(pm.collectionVariables.get(\"allFilters\"));\r",
+							"\r",
+							"function returnFilter(filterObj) {\r",
+							"    const filter = Object.keys(filterObj)[0];\r",
+							"    const filterType = filter.split(\".\");\r",
+							"    return filterType[filterType.length-1];\r",
+							"};\r",
+							"\r",
+							"function returnFilterValue(filterObj) {\r",
+							"    const filterValue = Object.values(filterObj)[0];\r",
+							"    return filterValue;\r",
+							"};\r",
+							"\r",
+							"let anyCharacterMatch = \".*\";\r",
+							"\r",
+							"function testFilters(song) {\r",
+							"    const songStr = JSON.stringify(song);\r",
+							"    console.log(songStr);\r",
+							"    allFilters.forEach(filter => {\r",
+							"        let filterType = returnFilter(filter);\r",
+							"        let value = returnFilterValue(filter);\r",
+							"        let pattern = new RegExp(`${filterType}${anyCharacterMatch}${value}`);\r",
+							"        pm.test(`Song should return song with property ${filterType} and value ${value}`, function () {\r",
+							"            pm.expect(songStr).to.match(pattern);\r",
+							"        });\r",
+							"    });\r",
+							"};\r",
+							"\r",
+							"songs.forEach(song=>{\r",
+							"    testFilters(song);\r",
+							"});\r",
+							"\r",
+							"// let currentIteration = pm.info.iteration+1;\r",
+							"// console.log(currentIteration);\r",
+							"// let totalIteration = Number(pm.info.iterationCount);\r",
+							"// console.log(totalIteration);\r",
+							"\r",
+							"// currentIteration <= totalIteration ? postman.setNextRequest(\"TimeFilter\") : postman.setNextRequest(\"songs\") ;"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "77b3e8d6-c773-4c0c-bb1e-3d0746abba43",
+						"exec": [
+							"const filters = pm.iterationData.get(\"filters\");\r",
+							"pm.collectionVariables.set(\"allFilters\", JSON.stringify(filters));\r",
+							"\r",
+							"function addParamsToUrl() {\r",
+							"    let params = [];\r",
+							"    filters.forEach(filter => {\r",
+							"        const keys = Object.keys(filter);\r",
+							"        const values = Object.values(filter);\r",
+							"        keys.forEach((key, index) => {\r",
+							"            let param = key + \"=\" + values[index];\r",
+							"            params.push(param);\r",
+							"        });\r",
+							"    });\r",
+							"    pm.request.url.addQueryParams(params);\r",
+							"};\r",
+							"\r",
+							"addParamsToUrl();\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "cd7da24e-bad8-40c3-b76a-5ee7f5d0b6fe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/songs"
+			},
+			"response": [
+				{
+					"id": "428585c2-157a-4cad-b33b-7cfcd2a56a3a",
+					"name": "time male",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/songs?properties.time=3:45&gender=male",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"songs"
+							],
+							"query": [
+								{
+									"key": "properties.time",
+									"value": "3:45"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 1,\r\n            \"gender\":\"male\",\r\n            \"title\": \"My way\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"3:45\",\r\n                \"year\": \"1955\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				},
+				{
+					"id": "f6a1c920-bfa6-4933-9a92-b7d8bc8bd02e",
+					"name": "Time female",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/songs"
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 3,\r\n            \"gender\":\"female\",\r\n            \"title\": \"Girl on fire\",\r\n            \"singer\": \"Alicia Keys\",\r\n            \"properties\": {\r\n                \"time\": \"3:55\",\r\n                \"year\": \"2010\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"gender\":\"female\",\r\n            \"title\": \"Love on top\",\r\n            \"singer\": \"Beyonce\",\r\n            \"properties\": {\r\n                \"time\": \"3:55\",\r\n                \"year\": \"2006\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "songs",
+			"_postman_id": "533311c0-d490-43ed-9283-a4cdf409709a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {}
+				},
+				"url": "{{url}}/songs"
+			},
+			"response": [
+				{
+					"id": "022811db-d5f3-4a22-966b-45f78b0a093f",
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{url}}/songs"
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"New York, New York\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"4:15\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Girl on fire\",\n            \"singer\": \"Alicia Keys\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2010\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Love on top\",\n            \"singer\": \"Beyonce\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2006\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Sinatra songs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35d444cc-e9ef-45e3-868c-674c9af26533",
+						"exec": [
+							"// pm.test(\"Status code is 200\", function () {\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// });\r",
+							"\r",
+							"// const songsArray = pm.response.json().songs;\r",
+							"\r",
+							"// let filter = pm.iterationData.get(\"filter\").split(\".\");\r",
+							"// let filterValue = pm.iterationData.get(\"value\");\r",
+							"// let flag = \".*\";\r",
+							"\r",
+							"// let testedProperty = filter[filter.length - 1];\r",
+							"\r",
+							"// let pattern = new RegExp(`${testedProperty}${flag}${filterValue}`);\r",
+							"// console.log(pattern);\r",
+							"\r",
+							"// songsArray.forEach(song => {\r",
+							"//     const songStr = JSON.stringify(song);\r",
+							"//     pm.test(`Song should return song with property ${testedProperty} and value ${filterValue}`, function () {\r",
+							"//         pm.expect(songStr).to.match(pattern);\r",
+							"//     });\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "7fc24471-d413-41f6-92f1-0d4d1ee34e3d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/songs?singer=Frank Sinatra&properties.year=1956",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"songs"
+					],
+					"query": [
+						{
+							"key": "singer",
+							"value": "Frank Sinatra"
+						},
+						{
+							"key": "properties.year",
+							"value": "1956"
+						},
+						{
+							"key": "properties.time",
+							"value": "null",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "bd02e7f0-72dd-4c71-9b15-9632df3f7371",
+					"name": "Sinatra songs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/songs?properties.year=1955&singer=Frank Sinatra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"songs"
+							],
+							"query": [
+								{
+									"key": "properties.year",
+									"value": "1955"
+								},
+								{
+									"key": "singer",
+									"value": "Frank Sinatra"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"My way\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"3:45\",\r\n                \"year\": \"1955\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"title\": \"New York, New York\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"4:15\",\r\n                \"year\": \"1955\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				},
+				{
+					"id": "93fe7709-5f43-420f-a0e2-51bd16f91b58",
+					"name": "Sinatra songs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/songs?singer=Frank Sinatra&properties.year=1956",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"songs"
+							],
+							"query": [
+								{
+									"key": "singer",
+									"value": "Frank Sinatra"
+								},
+								{
+									"key": "properties.year",
+									"value": "1956"
+								},
+								{
+									"key": "properties.time",
+									"value": "null",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 21 Oct 2022 19:28:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "488"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=6b20b0a9a63ef122"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=9d7ccade60003d48"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1666380545"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e8-759MqW02PSBecHXgYjNtZi2iIyM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"My way\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"3:45\",\r\n                \"year\": \"1955\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"title\": \"New York, New York\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"4:15\",\r\n                \"year\": \"1955\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ca6eed9c-d450-47f4-824e-2d582f45e6cd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ac57a6c9-ca2f-4cc1-a322-5436174a9ba8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d10635df-3dcf-4655-9e15-0c301c524d24",
+			"key": "url",
+			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io",
+			"type": "string"
+		},
+		{
+			"id": "0e9504d0-aaab-4965-83e6-599477efe42a",
+			"key": "allFilters",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
