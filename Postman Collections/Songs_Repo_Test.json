@@ -92,7 +92,7 @@
 					}
 				}
 			],
-			"_postman_id": "cd7da24e-bad8-40c3-b76a-5ee7f5d0b6fe",
+			"id": "cd7da24e-bad8-40c3-b76a-5ee7f5d0b6fe",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -153,7 +153,7 @@
 		},
 		{
 			"name": "songs",
-			"_postman_id": "533311c0-d490-43ed-9283-a4cdf409709a",
+			"id": "533311c0-d490-43ed-9283-a4cdf409709a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -168,8 +168,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {}
+					"raw": ""
 				},
 				"url": "{{url}}/songs"
 			},
@@ -229,7 +228,7 @@
 					}
 				}
 			],
-			"_postman_id": "7fc24471-d413-41f6-92f1-0d4d1ee34e3d",
+			"id": "7fc24471-d413-41f6-92f1-0d4d1ee34e3d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -391,7 +390,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ca6eed9c-d450-47f4-824e-2d582f45e6cd",
+				"id": "fd6283d3-a1e9-49d7-8cb0-bf58744546ce",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -401,26 +400,26 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ac57a6c9-ca2f-4cc1-a322-5436174a9ba8",
+				"id": "f5cedbe4-2c86-44d4-b9c0-7b70e9726d6d",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
 				]
 			}
 		}
 	],
 	"variable": [
 		{
-			"id": "d10635df-3dcf-4655-9e15-0c301c524d24",
+			"id": "81fa00db-00d2-4b71-a1da-8dd82a0302ec",
 			"key": "url",
-			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io",
-			"type": "string"
+			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "0e9504d0-aaab-4965-83e6-599477efe42a",
+			"id": "42e86bef-ca8c-443f-8fcf-12e6a8a4ff6d",
 			"key": "allFilters",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
