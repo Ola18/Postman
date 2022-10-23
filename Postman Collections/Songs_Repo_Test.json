@@ -132,7 +132,22 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "{{url}}/songs"
+						"url": {
+							"raw": "{{url}}/songs?gender=female",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"songs"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"_postman_previewlanguage": "json",
 					"header": null,
@@ -212,12 +227,12 @@
 	],
 	"variable": [
 		{
-			"id": "8901a8ed-3bf0-4df6-a158-da1b53f62df3",
+			"id": "9a966093-b4dc-4b7f-ac0c-d77584126975",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "17ca13db-f454-4e52-9636-ef1d5683d8dc",
+			"id": "6be6c93f-b641-4d3c-9e21-70464feee64c",
 			"key": "allFilters",
 			"value": ""
 		}
