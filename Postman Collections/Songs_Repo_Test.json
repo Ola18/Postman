@@ -127,7 +127,7 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"male\":\"gender\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        }\n    ]\n}"
+					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"gender\":\"male\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        }\n    ]\n}"
 				}
 			]
 		},
@@ -213,12 +213,12 @@
 	],
 	"variable": [
 		{
-			"id": "23f7ed3c-d4ab-4b94-98ed-d644f8d46b61",
+			"id": "39625999-080f-42d4-aa9e-2aab320c8d26",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "bd5e3f19-e5e4-4f7d-a3bb-8561fa5ebd8f",
+			"id": "3e30f7af-b5c3-4d51-98f7-02dc39459109",
 			"key": "allFilters",
 			"value": ""
 		}
