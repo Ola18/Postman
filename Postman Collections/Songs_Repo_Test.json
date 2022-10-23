@@ -18,21 +18,19 @@
 							"\r",
 							"let anyCharacterMatch = \".*\";\r",
 							"\r",
-							"function testFilters(song) {\r",
-							"    const songStr = JSON.stringify(song);\r",
-							"    console.log(songStr);\r",
-							"    allFilters.forEach(filter => {\r",
-							"        let filterType = filter.match(/(?=.)\\w*(?=\\=)/);\r",
-							"        let value = filter.match(/[^=]*$/);\r",
-							"        let pattern = new RegExp(`${filterType}${anyCharacterMatch}${value}`);\r",
-							"        pm.test(`Song should return song with property ${filterType} and value ${value}`, function () {\r",
-							"            pm.expect(songStr).to.match(pattern);\r",
+							"songs.forEach(song => {\r",
+							"    (song => {\r",
+							"        const songStr = JSON.stringify(song);\r",
+							"        console.log(songStr);\r",
+							"        allFilters.forEach(filter => {\r",
+							"            let filterType = filter.match(/(?=.)\\w*(?=\\=)/);\r",
+							"            let value = filter.match(/[^=]*$/);\r",
+							"            let pattern = new RegExp(`${filterType}${anyCharacterMatch}${value}`);\r",
+							"            pm.test(`Song should return song with property ${filterType} and value ${value}`, function () {\r",
+							"                pm.expect(songStr).to.match(pattern);\r",
+							"            });\r",
 							"        });\r",
-							"    });\r",
-							"};\r",
-							"\r",
-							"songs.forEach(song=>{\r",
-							"    testFilters(song);\r",
+							"    })\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -202,12 +200,12 @@
 	],
 	"variable": [
 		{
-			"id": "1856ee98-fee7-4fcc-b0bb-8722328da943",
+			"id": "8c0deae0-6f5d-4d28-b4bf-2caee61ff3b2",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "0cdae0c2-93d3-49cd-8366-5dcfdf8bcaac",
+			"id": "aabe29dc-a833-4fa5-af8f-305b98f1e3e3",
 			"key": "allFilters",
 			"value": ""
 		}
