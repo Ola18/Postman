@@ -26,7 +26,7 @@
 							"    allFilters.forEach(filter => {\r",
 							"        let filterType = filter.match(/(?=.)\\w*(?=\\=)/);\r",
 							"        let value = filter.match(/[^=]*$/);\r",
-							"        let pattern = new RegExp(`${filterType}${anyCharacterMatch}${value}`);\r",
+							"        let pattern = new RegExp(`${filterType}${anyCharacterMatch}${startOfWord}${value}`);\r",
 							"        console.log('PATTERN ' + pattern);\r",
 							"        pm.test(`Song should return song with property ${filterType} and value ${value}`, function () {\r",
 							"            pm.expect(songStr).to.match(pattern);\r",
@@ -216,12 +216,12 @@
 	],
 	"variable": [
 		{
-			"id": "cfcfb9b6-f350-43b9-959d-2dcc2ab061e1",
+			"id": "ce0230ff-c2d6-4b39-aa74-7e5f1c98446b",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "3a4b7d68-4757-4007-932e-a130da48dddb",
+			"id": "db353132-1b56-4cdc-9dbf-6c80b6957134",
 			"key": "allFilters",
 			"value": ""
 		}
