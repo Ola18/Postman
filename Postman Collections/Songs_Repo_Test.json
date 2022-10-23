@@ -161,7 +161,7 @@
 					],
 					"cookie": [],
 					"responseTime": null,
-					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"New York, New York\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"4:15\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Girl on fire\",\n            \"singer\": \"Alicia Keys\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2010\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Love on top\",\n            \"singer\": \"Beyonce\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2006\"\n            }\n        }\n    ]\n}"
+					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        }\n    ]\n}"
 				}
 			]
 		},
@@ -249,12 +249,12 @@
 	],
 	"variable": [
 		{
-			"id": "ffe16df6-9ae6-4cb7-98e7-7a991025155e",
+			"id": "3a23c4eb-5dd3-40c4-89bb-e17a89aa7387",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "55613755-6dad-4fae-978d-740d120b3482",
+			"id": "6d49d899-8ccd-4bd7-b29e-c40ed621621b",
 			"key": "allFilters",
 			"value": ""
 		}
