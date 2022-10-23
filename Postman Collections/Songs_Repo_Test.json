@@ -102,6 +102,20 @@
 		},
 		{
 			"name": "NullFilterResults",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eda17a8a-7fa4-430c-8fa1-6c9af7a54ec4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "533311c0-d490-43ed-9283-a4cdf409709a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -170,12 +184,12 @@
 	],
 	"variable": [
 		{
-			"id": "01405b0f-8d54-4e84-8430-7e063217e34d",
+			"id": "350017d4-aff7-4442-9f90-8d801070b76c",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "459d75e5-4742-4d3b-974c-3c3e1b3bc10f",
+			"id": "e161adf1-9a2a-4351-a23b-329153edc1c8",
 			"key": "allFilters",
 			"value": ""
 		}
