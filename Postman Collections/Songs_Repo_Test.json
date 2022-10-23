@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "TimeFilter",
+			"name": "PositiveFilterResult",
 			"event": [
 				{
 					"listen": "test",
@@ -170,12 +170,12 @@
 	],
 	"variable": [
 		{
-			"id": "971bd9db-8856-4269-988a-92b1f5b615b1",
+			"id": "08c70a34-9197-4309-a1b7-ffe2dcb5780b",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "2f905859-d939-451d-8383-b5213f0e9d72",
+			"id": "140471f6-11e9-4f81-b06f-2036b6065bb5",
 			"key": "allFilters",
 			"value": ""
 		}
