@@ -88,24 +88,6 @@
 					"script": {
 						"id": "77b3e8d6-c773-4c0c-bb1e-3d0746abba43",
 						"exec": [
-							"// const filters = pm.iterationData.get(\"filters\");\r",
-							"// pm.collectionVariables.set(\"allFilters\", JSON.stringify(filters));\r",
-							"\r",
-							"// function addParamsToUrl() {\r",
-							"//     let params = [];\r",
-							"//     filters.forEach(filter => {\r",
-							"//         const keys = Object.keys(filter);\r",
-							"//         const values = Object.values(filter);\r",
-							"//         keys.forEach((key, index) => {\r",
-							"//             let param = key + \"=\" + values[index];\r",
-							"//             params.push(param);\r",
-							"//         });\r",
-							"//     });\r",
-							"//     pm.request.url.addQueryParams(params);\r",
-							"// };\r",
-							"\r",
-							"// addParamsToUrl();\r",
-							"\r",
 							"const filters = pm.iterationData.get(\"filters\");\r",
 							"\r",
 							"pm.collectionVariables.set(\"allFilters\", filters);\r",
@@ -265,12 +247,12 @@
 	],
 	"variable": [
 		{
-			"id": "d97a9c71-9d98-4102-981d-b6d0b9dbc375",
+			"id": "686c55a1-4a89-4c3f-99ab-1ea0da341136",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "c279a02f-c439-4dbc-bb19-543fde6f10cc",
+			"id": "2e69c0e8-c450-4ea1-9b6b-4498d6d4abe4",
 			"key": "allFilters",
 			"value": ""
 		}
