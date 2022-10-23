@@ -20,7 +20,6 @@
 							"\r",
 							"songs.forEach(song => {\r",
 							"    const songStr = JSON.stringify(song);\r",
-							"    console.log(songStr);\r",
 							"    allFilters.forEach(filter => {\r",
 							"        let filterType = filter.match(/(?=.)\\w*(?=\\=)/);\r",
 							"        let value = filter.match(/[^=]*$/);\r",
@@ -214,12 +213,12 @@
 	],
 	"variable": [
 		{
-			"id": "698a45bc-5f7b-49eb-8b59-9d2f2de8c4dc",
+			"id": "6f3eb4c2-d790-4766-a87c-0b6353be3579",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "c10091b3-2e56-4102-b516-cfe44134aa3d",
+			"id": "d30370ae-5a66-47c8-a2cc-0edcadddcfe6",
 			"key": "allFilters",
 			"value": ""
 		}
