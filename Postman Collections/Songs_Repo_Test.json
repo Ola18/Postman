@@ -97,6 +97,71 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\r\n    \"songs\": [\r\n        {\r\n            \"id\": 1,\r\n            \"gender\":\"male\",\r\n            \"title\": \"My way\",\r\n            \"singer\": \"Frank Sinatra\",\r\n            \"properties\":{\r\n                \"time\": \"3:45\",\r\n                \"year\": \"1955\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				},
+				{
+					"id": "40d3f236-c693-470d-b2c9-a8fd73607eab",
+					"name": "PositiveFilterResult",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/songs"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 23 Oct 2022 17:34:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "902"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=5684811535e65384"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=4d3e44965edb2628"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1666546553"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"386-BIPhgOJxYHMKAjNKmkS+VUiF45Y\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"songs\": [\n        {\n            \"id\": 1,\n            \"title\": \"My way\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"3:45\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"New York, New York\",\n            \"singer\": \"Frank Sinatra\",\n            \"properties\":{\n                \"time\": \"4:15\",\n                \"year\": \"1955\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Girl on fire\",\n            \"singer\": \"Alicia Keys\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2010\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Love on top\",\n            \"singer\": \"Beyonce\",\n            \"properties\":{\n                \"time\": \"3:55\",\n                \"year\": \"2006\"\n            }\n        }\n    ]\n}"
 				}
 			]
 		},
@@ -184,12 +249,12 @@
 	],
 	"variable": [
 		{
-			"id": "b0d5f300-0cb3-4c79-b78a-14b8e8fe3e37",
+			"id": "ffe16df6-9ae6-4cb7-98e7-7a991025155e",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "7812b07a-4aba-4702-99d6-4852c7d4c704",
+			"id": "55613755-6dad-4fae-978d-740d120b3482",
 			"key": "allFilters",
 			"value": ""
 		}
