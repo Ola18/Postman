@@ -73,7 +73,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/songs?properties.time=3:45&gender=male",
+							"raw": "{{url}}/songs?singer=Frank Sinatra&properties.year=1955",
 							"host": [
 								"{{url}}"
 							],
@@ -82,13 +82,12 @@
 							],
 							"query": [
 								{
-									"key": "properties.time",
-									"value": "3:45"
+									"key": "singer",
+									"value": "Frank Sinatra"
 								},
 								{
-									"key": "gender",
-									"value": "male",
-									"type": "text"
+									"key": "properties.year",
+									"value": "1955"
 								}
 							]
 						}
@@ -171,12 +170,12 @@
 	],
 	"variable": [
 		{
-			"id": "131869f7-4655-4a03-a813-0dd1c616a53d",
+			"id": "971bd9db-8856-4269-988a-92b1f5b615b1",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "f8213a01-1338-48d6-9f09-9e40454958e3",
+			"id": "2f905859-d939-451d-8383-b5213f0e9d72",
 			"key": "allFilters",
 			"value": ""
 		}
