@@ -46,14 +46,7 @@
 							"\r",
 							"songs.forEach(song=>{\r",
 							"    testFilters(song);\r",
-							"});\r",
-							"\r",
-							"// let currentIteration = pm.info.iteration+1;\r",
-							"// console.log(currentIteration);\r",
-							"// let totalIteration = Number(pm.info.iterationCount);\r",
-							"// console.log(totalIteration);\r",
-							"\r",
-							"// currentIteration <= totalIteration ? postman.setNextRequest(\"TimeFilter\") : postman.setNextRequest(\"songs\") ;"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -219,12 +212,12 @@
 	],
 	"variable": [
 		{
-			"id": "1979f02f-37bd-4e64-8ad9-dbd80fe0cd79",
+			"id": "8901a8ed-3bf0-4df6-a158-da1b53f62df3",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "8ea39c25-b5c6-4ac8-ae06-e25af6a5732f",
+			"id": "17ca13db-f454-4e52-9636-ef1d5683d8dc",
 			"key": "allFilters",
 			"value": ""
 		}
