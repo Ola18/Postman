@@ -193,7 +193,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "fd6283d3-a1e9-49d7-8cb0-bf58744546ce",
+				"id": "a82ef5c2-7c49-4bec-b161-da0a78c0fe40",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -203,24 +203,22 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f5cedbe4-2c86-44d4-b9c0-7b70e9726d6d",
+				"id": "10b3de0f-1089-4c18-9f6b-5fc182888f56",
 				"type": "text/javascript",
 				"exec": [
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});"
+					""
 				]
 			}
 		}
 	],
 	"variable": [
 		{
-			"id": "763d7ca0-5bcc-4da3-a0ca-863d3d79e7dd",
+			"id": "be7d9a3d-9070-451c-8550-e1d675a9b434",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "3f13fbff-2968-47f0-8bbc-1532df5a394a",
+			"id": "c7e1d081-8be7-439f-8fea-18aa6607ecc6",
 			"key": "allFilters",
 			"value": ""
 		}
