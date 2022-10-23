@@ -13,9 +13,7 @@
 					"script": {
 						"id": "35d444cc-e9ef-45e3-868c-674c9af26533",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
+							"\r",
 							"\r",
 							"const songs = pm.response.json().songs;\r",
 							"const allFilters = JSON.parse(pm.collectionVariables.get(\"allFilters\"));\r",
@@ -221,12 +219,12 @@
 	],
 	"variable": [
 		{
-			"id": "1be5f23d-b8d9-4d66-b964-33d02efcc25a",
+			"id": "1979f02f-37bd-4e64-8ad9-dbd80fe0cd79",
 			"key": "url",
 			"value": "https://554dc223-38a6-4f43-b633-b9e6638fdc76.mock.pstmn.io"
 		},
 		{
-			"id": "3779c3ce-e691-4134-adc9-0dec94b00989",
+			"id": "8ea39c25-b5c6-4ac8-ae06-e25af6a5732f",
 			"key": "allFilters",
 			"value": ""
 		}
